@@ -3,7 +3,7 @@ import React from "react";
 
 const GoalItem = (props) => {
   return (
-    <Pressable onPress={props.onDeleteItem}>
+    <Pressable onPress={props.onDeleteItem.bind(this, props.id)}>
       <View style={styles.listGoals}>
         <Text style={styles.listText}>{props.text}</Text>
       </View>
